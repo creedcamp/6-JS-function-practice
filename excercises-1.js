@@ -1,6 +1,7 @@
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
+
 function sum(a, b) {
   return a + b
 }
@@ -71,6 +72,32 @@ console.assert(greet("Iron Man") === "Hello, Iron Man!")
 // strings. For example:
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
+
+function madlib(a) {
+  var Qa = "quick" || "fat"
+  var Fr =  "fox" || "rabbit"
+  var Jh = "jumps" || "hops"
+  var Fw = "fence" || "wall"
+  var pre = "The "
+  var start = " brown "
+  var mid = " over the "
+  var end = "."
+  var newSent = ""
+  var warp = a.includes()
+  for (i=0; i < warp.length; i++) {
+    let curWord = warp.charAt(i)
+    if (Qa(curWord)) {
+      newSent = newSent + (pre + curWord) 
+    } else if (Fr(curWord)) {
+      newSent = newSent + (start + curWord)
+    } else if (Jh(curWord)) {
+      newSent = newSent + (curWord + mid)
+    } else (Fw(curWord)) {
+      newSent = newSent + (curWord + end)
+    }
+  } return newSent
+}
+
 
 console.assert(
   madlib("quick", "fox", "jumps", "fence") ===
